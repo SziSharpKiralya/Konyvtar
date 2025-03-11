@@ -26,5 +26,21 @@ namespace Konyvtar
             this.releaseYear = releaseYear;
         }
 
+        public void EditBookData()
+        {
+            Console.Write("Title:");
+            title = Console.ReadLine().ToString();
+            Console.Write("Author:");
+            author = Console.ReadLine().ToString();
+            Console.Write("Page count:");
+            pageCount = Convert.ToInt32(Console.ReadLine());
+            Console.Write("ReleaseYear:");
+            releaseYear = Convert.ToInt32(Console.ReadLine());
+        }
+
+        public override string ToString()
+        {
+            return $"{Title} - {Author} ({ReleaseYear}), {PageCount} pages";
+        }
     }
 }
